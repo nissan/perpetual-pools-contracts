@@ -22,7 +22,7 @@ These are the current contracts that are being used on Arbitrum One.
 | `LeveragedPool` | 1p BTC/USD | [0x146808f54DB24Be2902CA9f595AD8f27f56B2E76](https://arbiscan.io/address/0x146808f54DB24Be2902CA9f595AD8f27f56B2E76) |
 | `PoolCommitter` | 1p BTC/USD | [0x539Bf88D729B65F8eC25896cFc7a5f44bbf1816b](https://arbiscan.io/address/0x539Bf88D729B65F8eC25896cFc7a5f44bbf1816b) |
 | `LeveragedPool` | 3p ETH/USD | [0x54114e9e1eEf979070091186D7102805819e916B](https://arbiscan.io/address/0x54114e9e1eEf979070091186D7102805819e916B) |
-| `PoolCommitter` | 3p ETH/USD | [0x759E817F0C40B11C775d1071d466B5ff5c6ce28e](https://arbiscan.io/address/0x759E817F0C40B11C775d1071d466B5ff5c6ce28e) |
+| `PoolCommitter` | 3p ETH/USD | [0x72c4e7Aa6c743DA4e690Fa7FA66904BC3f2C9C04](https://arbiscan.io/address/0x72c4e7Aa6c743DA4e690Fa7FA66904BC3f2C9C04) |
 | `LeveragedPool` | 1p ETH/USD | [0x3A52aD74006D927e3471746D4EAC73c9366974Ee](https://arbiscan.io/address/0x3A52aD74006D927e3471746D4EAC73c9366974Ee) |
 | `PoolCommitter` | 1p ETH/USD | [0x047Cd47925C2390ce26dDeB302b8b165d246d450](https://arbiscan.io/address/0x047Cd47925C2390ce26dDeB302b8b165d246d450) |
 
@@ -31,12 +31,12 @@ These are the current contracts that are being used on Arbitrum One.
 The `PoolSwapLibrary` contains several methods for generating, converting, and using the raw ratio values. These can be used in the frontend to estimate the result of a transaction. It is vital when estimating the result of a transaction that the shadow pool amount for the commit type's opposite is included in the token total supply.
 
 ## Environment variables
-The environment variables used in this project are documented in the `example.env` file at the root of the project. To configure, create a copy of `example.env`, rename to `.env`, and replace the placeholders with the correct values. 
+The environment variables used in this project are documented in the `example.env` file at the root of the project. To configure, create a copy of `example.env`, rename to `.env`, and replace the placeholders with the correct values.
 
 ## Using this Project
 
-Install the dependencies with `yarn`. 
-Build everything with `yarn compile`. 
+Install the dependencies with `yarn`.
+Build everything with `yarn compile`.
 Run the tests with `yarn test`.
 
 ## Available Functionality
@@ -49,7 +49,7 @@ You'll need to run this before running tests if typescript throws an error about
 ### Run Slither for static analysis report
 If you have `slither` installed and on your PATH, you can run `npm run slither` to get a report on the current codebase.
 
- 
+
 ### Deploy to Ethereum
 
 Create/modify network config in `hardhat.config.ts` and add API key and private key, then run:
@@ -67,7 +67,7 @@ PRs and feedback welcome!
 
 ## Frequently Asked Questions
 
-**How are pool keepers to be chosen? How many keepers are there?** 
+**How are pool keepers to be chosen? How many keepers are there?**
 
 The Pool Keeper is simply a contract that enforces the correct keeper behaviour. Anyone may be a keeper by calling the keeper function on that contract with a pool that is valid for upkeep. We will initially be adding wrappers for Chainlink keepers as well as having custom keepers.
 
